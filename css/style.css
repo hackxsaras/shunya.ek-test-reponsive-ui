@@ -188,10 +188,12 @@ body{
 
 
 /* <RESPONSIVE> */
+@media only screen and (max-width:1000px){
+	.options > div > .status {
+		display:none;
+	}
+}
 @media only screen and (max-width: 800px){
-	.padded-50{ 
-		padding:0; 
-	} 
 	#sp-1{ 
 		height:auto;
 		flex-direction:column;
@@ -199,6 +201,9 @@ body{
 	}
 	.card{
 		width:calc(100% - 30px);
+	}
+	.full-container{
+		padding:0;
 	}
 }
 
