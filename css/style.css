@@ -1,0 +1,205 @@
+/* <GENERAL> */
+*{
+	transition:all 0.2s linear;
+	overflow:visible;
+	position:relative;
+}
+body{
+	margin:0;
+	font-family:Arial;
+}
+.full-container{
+	width:100vw;
+	height:100vh;
+}
+.fullw{
+	width:100%;
+}
+.padded-75{
+	padding: 75px;
+}
+.padded-50{
+	padding:50px;
+}
+.padded-10{
+	padding:10px;
+}
+.margin-10{
+	margin:10px;
+}
+.rounded {
+	border-radius:10px;
+}
+.shadowed{
+	box-shadow:0px 0px 50px #888;
+}
+.bg-0f0{
+
+}
+.bg-f05{
+	background:#f5a;
+}
+.bg-fff{
+	background:#fff;
+}
+.bg-203{
+	background:#203;
+}
+.bbox{
+	box-sizing:border-box;
+}
+.flex{
+	display:flex;
+}
+.flexc{ /* c stands for column */
+	display:flex;
+	flex-direction:column;
+}
+.flexy{
+	flex:1;
+}
+.centered{
+	margin-left:50%;
+	transform:translateX(-50%);
+}
+.clr-fff{
+	color:#fff;
+}
+.clr-bbb{
+	color:#bbb;
+}
+.fs14{ font-size:14px; }
+/* </GENERAL> */
+
+
+/* <SPECIFIC> */
+#sp-1{
+	max-width:1000px;
+}
+.card{
+	height:calc(100vh - 100px);
+	width:50%;
+	overflow-y:auto;
+}
+.project{
+	display:inline-block;
+	margin-right:10px;
+	margin-bottom:50px;
+	width:70px;
+	height:70px;
+	border-radius:15px;
+	background:rgba(255,255,255,0.5);
+}
+.project:nth-child(3n+0){
+	background:linear-gradient(45deg, #0b5, #5b9);
+}
+.project:nth-child(3n+1){
+	background:linear-gradient(45deg, #f05, #f59);
+}
+.project:nth-child(3n+2){
+	background:linear-gradient(45deg, #05f, #59f);
+}
+.project:hover > .selected{
+	position:absolute;
+	width:80px;
+	height:80px;
+	border:2px solid #f05;
+	border-radius:20px;
+	transform:translateX(-7px) translateY(-7px);
+}
+.project > .name{
+	color:#ddd;
+	position:absolute;
+	top:120%;
+	width:100%;
+	overflow:hidden;
+	font-size:13px;
+	text-align:center;
+}
+.project > .initials{
+	position:absolute;
+	width:100%;
+	top:35px;
+	transform:translateY(-50%);
+	text-align:center;
+	color:rgba(255,255,255,1);
+	font-weight:bold;
+	font-size:25px;
+}
+#text-cyber-punk{ 
+	margin:0;
+	padding:5px; 
+}
+.cyber-punk-images > img{
+	border-radius:50%;
+	height:35px;
+	margin-left:-15px;
+	border:2px solid #fff;
+}
+.cyber-punk-images > img:first-child{
+	margin-left:0px;
+}
+.checkbox{
+	border:0.5px solid #aaa;
+	width:20px;
+	height:20px;
+	line-height:140%;
+	text-align:center;
+	color:#fff;
+	border-radius:50%;
+	margin-right:10px;
+}
+.checkbox.checked{
+	background:#0d0;
+}
+.options > div {
+	margin:5px;
+}
+.options > div > .flexy {
+	line-height:150%;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:14px;
+	color:#555;
+}
+.options > div > .status{
+	padding:3px;
+	border-radius:20px;
+	font-weight:600;
+	min-width:75px;
+	font-size:10px;
+	line-height: 150%;
+	text-align:center;
+}
+.options > div > .status.active{
+	background:#ffa;
+	color:#aa0;
+}
+.options > div > .status.pending{
+	background:#aaa;
+	color:#111;
+}
+.options > div > .status.completed{
+	background:#afa;
+	color:#0a0;
+}
+/* </SPECIFIC> */
+
+
+
+/* <RESPONSIVE> */
+@media only screen and (max-width: 800px){
+	.padded-50{ 
+		padding:0; 
+	} 
+	#sp-1{ 
+		height:auto;
+		flex-direction:column;
+		border-radius:0px;
+	}
+	.card{
+		width:calc(100% - 30px);
+	}
+}
+
+/* </RESPONSIVE> */
